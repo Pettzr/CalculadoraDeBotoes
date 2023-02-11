@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Botão</title>
+        <style>
+            .main {
+                display: flex;  
+                width: 99vw;
+                height: 97vh;    
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+                
+            }
+
+            .darkerButton {
+                background-color: darkgrey;
+            }
+
+            input {
+                
+                background-color: lightgray;
+                border-width: 0;
+                height: 4vw;
+                width: 8vh;
+                
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.3%;
+                align-items: center;
+                justify-content: end;
+                padding-bottom: 1%;
+                background-color: rgb(83, 82, 82);
+                height: 60vh;
+                width: 20vw;
+                border-radius: 3%;
+            }
+            
+            .num1 {
+                background-color: rgb(59, 58, 58);
+                height: 4vw;
+                width: 15vh;
+            }
+            .num2 {
+                background-color: rgb(59, 58, 58);
+                height: 4vw;
+                width: 15vh;
+            }
+            #sinalDeIgual{
+                
+                
+                margin-left: -15vw;
+            }
+
+            #visor{
+                display: flex;
+                flex-direction: row;
+                height: 3cm;
+              
+                
+            }
+            
+            #visorIgual{
+                padding-top: 3vw;
+                display: block;
+                
+            }
+
+            input:active{
+                background-color: rgb(54, 54, 54);
+            }
+
+        </style>
+</head>
+    <body>
+        <main class="main">
+        <form>
+
+
+
+
+
+
+
+        <div id="visor">   
+                 <div class="num2">
+                       <span id="mySpanTwo"></span>
+                 </div>
+            <div class="num1">
+                <h2><span id="mySpan"></span></h2></span> </h1>
+            </div>
+            <div id="visorIgual"><h1> <span id="sinalDeIgual">=</span> <span id="resultid"></span></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+            <div class="div0">
+                <input class="operador buttonStyle darkerButton" type="button" value="X" onclick="operacoes('X')">
+                <input class="operador buttonStyle darkerButton" type="button" value="+" onclick="operacoes('+')">
+                <input class="operador buttonStyle darkerButton" type="button" value="-" onclick="operacoes('-')">
+                <input class="show buttonStyle darkerButton" type="button" value="←" onclick="valores('←')">
+            </div>
+
+            <div class="div1">
+                <input class="operador buttonStyle darkerButton" type="button" value="/" onclick="operacoes('/')">
+                <input class="show buttonStyle" type="button" value="1" onclick="valores('1')">
+                <input class="show buttonStyle" type="button" value="2" onclick="valores('2')">
+                <input class="show buttonStyle" type="button" value="3" onclick="valores('3')">
+            </div>
+
+            <div class="div2">
+
+            <input class="operador buttonStyle darkerButton" type="button" value="^" onclick="operacoes('^')">
+                <input class="show buttonStyle" type="button" value="4" onclick="valores('4')">
+                <input class="show buttonStyle" type="button" value="5" onclick="valores('5')">
+                <input class="show buttonStyle" type="button" value="6" onclick="valores('6')">
+            </div>
+
+            <div class="div3">
+                <input class="operador buttonStyle darkerButton" type="button" value="√" onclick="operacoes('√')">
+                <input class="show buttonStyle" type="button" value="7" onclick="valores('7')">
+                <input class="show buttonStyle" type="button" value="8" onclick="valores('8')">
+                <input class="show buttonStyle" type="button" value="9" onclick="valores('9')">
+            </div>
+
+            <div class="div4">
+                <input class="show operador resultadofinal buttonStyle darkerButton" type="button" value="C" onclick="valores('C')">
+                <input class="show buttonStyle" type="button" value="." onclick="valores('.')">
+                <input class="show buttonStyle" type="button" value="0" onclick="valores('0')">
+                <input class="resultadofinal buttonStyle" id="res" type="button" value="=" onclick="calcFinalResult()">
+            </div>
+            
+            
+        </form>
+
+        
+        <br> 
+        
+        </main>
+
+        </body>
+
+
+    <script src="calc Botao.js"></script>
+</html>
