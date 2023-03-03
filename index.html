@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Botão</title>
+        <style>
+
+            body {
+                background-color: rgb(35, 39, 56);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 95vh;
+            }
+
+            main {
+                width: 35vh;
+                grid-row: 6;
+                display: flex;
+                justify-content: center;
+                background-color: rgb(65, 65, 65);
+                border-radius: 2%;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 3%;
+            }
+            
+            #visor{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                position:static;
+                flex-wrap: nowrap;
+                width: 35vh;
+            }
+
+            #mySpan{
+                height: 4vh;
+                font-size: 2.9vh;
+                background-color: rgb(0, 187, 187);
+                padding-left: 1%;
+                margin-top: -0.5%;
+            }
+
+            #mySpanTwo{
+                height: 3vh;
+                font-size: 2.4vh;
+                background-color: rgb(0, 187, 187);
+                padding-left: 1%;
+                
+            }
+
+            #resultid{  
+                background-color: rgb(84, 130, 161);
+                height: 5vh;
+                font-size: 3.8vh;
+                margin-bottom: 3%;
+                padding-left: 1%;
+            }
+
+
+            #teclas{
+                display: flex;
+                flex-direction: column;
+                width: 35vh;
+                position: relative;
+            }
+
+            .secaoTec{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+            }
+
+            .buttonStyle {
+                height: 8vh;
+                width: 25%;
+                font-size: 2.9vh;
+            }
+
+            .buttonStyleEqual{
+                height: 8vh;
+                width: 100%;
+                font-size: 2.9vh;
+                background-color: rgb(100, 100, 100);
+
+            }           
+            .operador{
+                background-color: rgb(100, 100, 100);
+                
+            }
+
+            input{
+                border: 0;
+                margin: 2px;
+            }
+            input:hover{
+                background-color: rgb(175, 175, 175);
+            }
+            @media (max-width: 600px) {
+                main {
+                width: 35vh;
+                grid-row: 6;
+                display: flex;
+                justify-content: center;
+                background-color: rgb(65, 65, 65);
+                border-radius: 2%;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 9%;
+                }  
+
+            }
+
+        </style>
+</head>
+    <body>
+        <main class="main">
+        <form>
+
+
+
+
+
+
+
+        <div id="visor">  
+                <div id="mySpanTwo"></div>
+
+                <div id="mySpan"></div>
+
+                <div style="font-size: 4vh;">=</div> <div id="resultid"></div>
+        </div>
+        
+
+
+
+
+
+
+        
+
+
+
+
+
+        <div id="teclas">
+            
+                <div class="secaoTec">
+                    <input class="operador buttonStyle darkerButton" type="button" value="/" onclick="operacoes('/')">
+                    <input class="operador buttonStyle darkerButton" type="button" value="X" onclick="operacoes('X')">
+                    <input class="operador buttonStyle darkerButton" type="button" value="-" onclick="operacoes('-')">
+                    <input class="operador buttonStyle darkerButton" type="button" value="+" onclick="operacoes('+')">
+                </div>
+
+                <div class="secaoTec">
+                    <input class="operador buttonStyle darkerButton" type="button" value="^" onclick="operacoes('^')">
+                    <input class="show buttonStyle" type="button" value="1" onclick="valores('1')">
+                    <input class="show buttonStyle" type="button" value="2" onclick="valores('2')">
+                    <input class="show buttonStyle" type="button" value="3" onclick="valores('3')">
+                </div>
+
+                <div class="secaoTec">
+                    <input class="operador buttonStyle darkerButton" type="button" value="√" onclick="operacoes('√')">
+                    <input class="show buttonStyle" type="button" value="4" onclick="valores('4')">
+                    <input class="show buttonStyle" type="button" value="5" onclick="valores('5')">
+                    <input class="show buttonStyle" type="button" value="6" onclick="valores('6')">
+                </div>
+
+                <div class="secaoTec">
+                    <input type="button" class="buttonStyle operador" value="%" onclick="operacoes('%')">
+                    <input class="show buttonStyle" type="button" value="7" onclick="valores('7')">
+                    <input class="show buttonStyle" type="button" value="8" onclick="valores('8')">
+                    <input class="show buttonStyle" type="button" value="9" onclick="valores('9')">
+                </div>
+
+                <div class="secaoTec">
+                    <input class="show operador resultadofinal buttonStyle darkerButton" type="button" value="C" onclick="valores('C')">
+                    <input class="show buttonStyle darkerButton" type="button" value="←" onclick="valores('←')">
+                    <input class="show buttonStyle" type="button" value="0" onclick="valores('0')">
+                    <input class="show buttonStyle" type="button" value="." onclick="valores('.')">
+                </div>
+                
+                <div class="secaoTec">
+                    <input class="resultadofinal buttonStyleEqual" id="res" type="button" value="=" onclick="calcFinalResult()">
+                </div>
+            </div>
+        </form>
+
+        
+        <br> 
+        
+        </main>
+
+        </body>
+
+
+    <script src="./calc Botao.js"></script>
+</html>
+
+<!--
+
+Adicionar %
+
+ver bug do .
+
+
+
+
+
+
+-->
